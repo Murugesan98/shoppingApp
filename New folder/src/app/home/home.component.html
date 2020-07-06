@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="row">
+  
+      <div class="col-lg-3">
+  
+        <h1 class="my-4">Catagories</h1>
+        <div class="list-group">
+          <a class="list-group-item" routerLink="/home">Fruits</a>
+          <a class="list-group-item" routerLink="/vegetables">Vegetables</a>
+          <a href="#" class="list-group-item" routerLink="/electronics">Electronics</a>
+        </div>
+  
+      </div>
+      <!-- /.col-lg-3 -->
+  
+      <div class="col-lg-9">
+        <p> fruits</p>
+  
+       
+        <div class="row">
+  
+          <div class="col-lg-4 col-md-6 mb-4"  *ngFor="let home of home.items">
+            <div class="card h-100">
+             <img class="card-img-top" [src]="home.imageUrl" alt="" height="170" width="170"/>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <h4>{{home.Name}}</h4>
+                </h4>
+                <h5>${{home.Price}}</h5>
+                <p class="card-text">{{home.description}}</p>
+                <button type="button" class="btn btn-primary" (click)= "clickFunction(home.Name, home.Catagory, home.imageUrl, home.Price)">Add</button>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+         
+  
+      </div>
+      <!-- /.col-lg-9 -->
+  
+    </div>
+  
+  
+  </div>
+  <!-- /.container -->
+  
+  <!-- Footer -->
+  <footer class="py-2 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; My shopping 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  
